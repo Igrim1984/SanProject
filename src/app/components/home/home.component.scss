@@ -1,0 +1,25 @@
+.main{
+    background: url("./../../../assets/Img/samolot.jpg") center no-repeat fixed;
+    background-size: cover;
+    padding: 20vh 0;
+  }
+  
+  .search{
+  
+    margin-left: 5vw;
+    background-color: #1C73D4;
+    max-width: 400px;
+  }
+  
+  .inputs{
+    display: flex;
+  }
+  
+  li{
+    list-style-type: none;
+    height: 30px;
+  }
+  
+  button{
+    width: 65%
+  }

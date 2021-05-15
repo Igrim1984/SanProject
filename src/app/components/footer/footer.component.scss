@@ -1,0 +1,29 @@
+.container{
+    background-color: blue;
+    padding: 10px 0;
+    min-width: 60vh;
+    color: white;
+  }
+ 
+  .wrapper{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  ul{
+    width:20%;
+  }
+  b{
+    text-transform: uppercase
+  }
+  li{
+    list-style-type: none;
+  }
+  
+  li:first-of-type{
+    margin-top: 10px;
+  }
+  
+  .copyright{
+    text-align: center;
+  }
