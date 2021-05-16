@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { TranslateModule } from '@ngx-translate/core'
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +14,11 @@ import { WcagComponent } from './components/wcag/wcag.component';
 import { InfoComponent } from './components/info/info.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 
 @NgModule({
   declarations: [
@@ -22,7 +32,15 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({  
+      loader: {
+      provide: TranslateLoader,
+      useFactory: HttpLoaderFactory,
+      deps: [HttpClient]
+    }
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]
