@@ -1,0 +1,17 @@
+{
+    "nav" : {
+      "homePage": "Pagina de inicio",    
+      "contact" : "Contacto",
+      "information" : "Información",
+      "log" : "Acceso",
+      "language" : "Idioma",
+      "wcag": "Facilitar el acceso"
+    },
+    "home": {
+        "departure": "Ciudad de salida",
+        "arrival": "Ciudad de destino",
+        "departuretDate": "Fecha de salida",
+        "dateOfArrival": "Fecha de llegada",
+        "passengers": "Número de pasajeros" 
+    }
+  }

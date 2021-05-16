@@ -2,16 +2,25 @@
 
 <ul>
   <li>
-    <a routerLink="home">Strona Główna</a>
+    <a routerLink="home">{{ 'nav.homePage' | translate }}</a>
   </li>
   <li>
-    <a routerLink="info">Informacje</a>
+    <a routerLink="info">{{ 'nav.information' | translate }}</a>
   </li>
   <li>
-    <a routerLink="wcag">Ułatwienia Dostępu</a>
+    <a routerLink="wcag">{{ 'nav.wcag' | translate}}</a>
   </li>
   <li>
-    <a routerLink="contact">Kontakt</a>
+    <a routerLink="contact">{{ 'nav.contact' | translate }}</a>
+  </li>
+  <li>{{ 'nav.language' | translate }} <select #langselect (change)="translate.use(langselect.value) " name="" id="">
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang">
+        {{ lang }}
+      </option>
+    </select>
+  </li>
+  <li>
+    <a>{{ 'nav.log' | translate }}</a>
   </li>
 
 
