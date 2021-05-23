@@ -12,6 +12,39 @@
         "arrival": "Ciudad de destino",
         "departuretDate": "Fecha de salida",
         "dateOfArrival": "Fecha de llegada",
-        "passengers": "Número de pasajeros" 
-    }
+        "passengers": "Número de pasajeros",
+        "goTo": "Ir más lejos" 
+    },
+    "wcag":{
+      "accesability": "Accesibilidad opciones",
+      "options": "Opciones para cambiar el aspecto de la página",
+      "contrast": "Alto contraste",
+      "bigFont": "Mayúsculas y minúsculas",
+      "letterSpacing": "Mayor espacio entre letras",
+      "lineSpacing" :"Mayor espaciado entre líneas",
+      "declaration" : "Declaración de disponibilidad"
+      },
+      "flight":{
+        "flightInfo":"Datos de vuelo seleccionados",
+        "flightFrom":"Lugar de salida",
+        "flightTo":"Lugar de llegada",
+        "flightDate":"Fecha de salida",
+        "returnDate":"Fecha de llegada",
+        "passangers":"Número de pasajeros",
+        "data": "Complete los datos a continuación",
+        "name": "Nombre",
+        "surname": "Apellido",
+        "city": "Ciudad",
+        "zipCode": "Código postal",
+        "street": "Calle",
+        "houseNb": "Número de casa",
+        "apartNb": "Número de apartamento",
+        "id": "Tipo de documento",
+        "idNb": "Número del Documento",
+        "phone": "Número de contacto",
+        "email":"Dirección de correo electrónico",
+        "idPass": "Pasaporte",
+        "idCard": "Tarjeta de identificación",
+        "goTo": "Ir a la selección de asientos" 
+      }
   }

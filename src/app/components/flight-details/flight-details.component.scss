@@ -1,0 +1,17 @@
+.main {
+    text-align: center;
+    line-height: 2em;
+    background: url(./../../../assets/Img/clouds.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding:  20px 0;
+}
+
+li{
+    list-style: none;
+}
+
+.dark {
+    background-image: none;
+    background-color: black;
+}

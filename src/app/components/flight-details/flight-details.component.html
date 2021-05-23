@@ -1,0 +1,34 @@
+   <div class="main" [class.dark]="darkMode" [class.bigFont]="bigFont" [class.letterSpacing]="letterSpacing"
+     [class.lineSpacing]="lineSpacing">
+     <h2> {{'flight.flightInfo' | translate}} </h2>
+
+     <ul>
+       <li>{{'flight.flightFrom' | translate}}:  {{ formData.whereFrom }}</li>
+       <li>{{'flight.flightTo' | translate}}:  {{ formData.whereTo }}</li>
+       <li>{{'flight.flightDate' | translate}}:  {{ formData.whenFrom }}</li>
+       <li>{{'flight.returnDate' | translate}}:  {{ formData.whenReturn }}</li>
+       <li>{{'flight.passangers' | translate}}:  {{ formData.passangers }}</li>
+
+     </ul>
+
+
+     <h2> {{'flight.data' | translate}} :</h2>
+
+     <ul>
+       <li>{{ 'flight.name' | translate}}: <input type="text" name="" id=""></li>
+       <li>{{ 'flight.surname' | translate}}: <input type="text" name="" id=""></li>
+       <li>{{ 'flight.email' | translate}}: <input type="email" name="" id=""></li>
+       <li>{{ 'flight.city' | translate}}: <input type="text" name="" id=""></li>
+       <li>{{ 'flight.zipCode' | translate}}: <input type="text" name="" id=""></li>
+       <li>{{ 'flight.street' | translate}}: <input type="text" name="" id=""></li>
+       <li>{{ 'flight.houseNb' | translate}}: <input type="text" name="" id=""></li>
+       <li>{{ 'flight.apartNb' | translate}}: <input type="text" name="" id=""></li>
+       <li>{{ 'flight.id' | translate}}: <select name="" id="">
+         <option value="pass">{{ 'flight.idPass' | translate}}</option>
+         <option value="card">{{ 'flight.idCard' | translate}}</option>
+       </select></li>
+       <li>{{ 'flight.idNb' | translate}}: <input type="text" name="" id=""></li>
+       <li>{{ 'flight.phone' | translate}}: <input type="text" name="" id=""></li>
+     </ul>
+     <button type="button" (click)="goToSeat()" class="btn">{{'flight.goTo' | translate}}</button>
+   </div>

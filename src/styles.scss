@@ -1,5 +1,52 @@
+$base-color: blue;
+$font-size: 22px;
+$secoundary-color: yellow;
+
 
 body{
     margin: 0;
     padding: 0;
+    font-size: $font-size;
+}
+
+.btn {
+    border-radius: 15px;
+    border: solid 4px $base-color;
+    color: $base-color;
+    background-color: whitesmoke;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    min-width: 100px;
+    }
+
+.btn:hover{
+    border-color: $secoundary-color;
+    color: $secoundary-color;
+    padding: 10px 12px
+}
+
+
+.container{
+    background-color: $base-color;
+    padding: 10px 0;
+    min-width: 60vh;
+    color: white;
+  }
+
+.dark{
+    background-color: black;
+    color:yellow;
+}
+
+.bigFont{
+    font-size: 2rem;
+}
+
+.letterSpacing{
+    letter-spacing: 5px;
+}
+
+.lineSpacing{
+    line-height: 4rem;
 }

@@ -1,5 +1,5 @@
-<div class="main">
-  <div class="search">
+<div class="main" [class.dark]="darkMode" [class.bigFont]="bigFont" [class.letterSpacing]="letterSpacing" [class.lineSpacing] = "lineSpacing">
+  <div class="search" [ngClass]="[darkMode ? 'dark': 'search']">
     <div class="inputs">
       <ul>
         <li>{{ 'home.departure' | translate}}</li>
@@ -11,26 +11,27 @@
 
       <ul>
         <li>
-          <select style="width: 100%">
-            <option>
-
+          <select style="width: 100%" #whereFrom>
+            <option [value]="homeCity.name" *ngFor="let homeCity of homeCities">
+              {{homeCity.name}}
             </option>
           </select>
         </li>
         <li>
-          <select style="width: 100%">
-            <option>
-
+          <select style="width: 100%" #whereTo>
+            <option [value]="homeCity.name" *ngFor="let homeCity of homeCities">
+              {{homeCity.name}}
             </option>
           </select>
         </li>
-        <li><input type="date" /></li>
-        <li><input type="date" /></li>
-        <li><input style="width: 100%" type="number" min="1" max="9" /></li>
+        <li><input type="date"  #whenFrom/></li>
+        <li><input type="date" #whenReturn/></li>
+        <li><input style="width: 100%" type="number" min="1" max="9" #passangers/></li>
       </ul>
     </div>
     <div style="text-align: center; padding-bottom: 3vh;">
-      <button>Szukaj</button>
+      <button (click)="getDataFromForm()" class="btn">{{ 'home.goTo' |translate}}</button>
     </div>
   </div>
 </div>
+<app-weather></app-weather>
