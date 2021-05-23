@@ -1,1 +1,185 @@
-<p>wcag works!</p>
+<div class="wrapper" [class.dark]="darkModeTemp" [class.bigFont]="bigFontTemp" [class.letterSpacing]="letterSpacingTemp" [class.lineSpacing] = "lineSpacingTemp">
+<h2>{{'wcag.accesability' | translate}}
+</h2>
+<img src="./../../../assets/Img/accesability.png" alt="Ikony informujace o dostępności">
+<h3>{{ 'wcag.options' | translate}}:</h3>
+    <ul>
+        <li>
+            <label for="contrast">{{ 'wcag.contrast' | translate}} </label>
+            <input type="checkbox" name="" id="contrast" (click) = "darkMode()" >
+        </li>
+        <li>
+            <label for="bigFont">{{ 'wcag.bigFont' | translate}} </label>
+            <input type="checkbox" name="" id="bigFont" (click) = "bigFont()">
+        </li>
+        <li>
+            <label for="letterSpacing">{{ 'wcag.letterSpacing' | translate}} </label>
+            <input type="checkbox" name="" id="letterSpacing" (click) = "letterSpacing()">
+        </li>
+        <li>
+            <label for="lineSpacing">{{ 'wcag.lineSpacing' | translate}} </label>
+            <input type="checkbox" name="" id="lineSpacing" (click) = "lineSpacing()">
+        </li>
+        
+    </ul>
+
+<h3>{{ 'wcag.declaration' | translate}}</h3>
+<ul>
+    <li>
+        <button (click)="langPl = !langPl" class="btn">{{langPl ? 'Ukryj deklarację dostępności' : 'Pokaż deklarację dostępności'}}</button>
+    </li>
+<li>
+    <button (click)="langEn = !langEn" class="btn">{{langEn ? 'Hide the declaration of availability' : 'Show declaration of availability'}}</button>
+</li>
+<li>
+<button (click)="langEs = !langEs" class="btn">{{langEs ? 'Ocultar la declaración de disponibilidad' : 'Mostrar declaración de disponibilidad'}}</button>
+</li>
+
+</ul>
+
+<ng-container *ngIf="langPl">
+<div class="declaration">
+<p>Nasza linia podrózy zobowiązuje się zapewnić dostępność swojej strony internetowej zgodnie z przepisami ustawy z dnia 4 kwietnia 2019 r. o dostępności cyfrowej stron internetowych i aplikacji mobilnych podmiotów publicznych. Oświadczenie w sprawie dostępności ma zastosowanie do strony internetowej serwisu</p>
+
+<p>Data publikacji strony internetowej: 23.05.2021.</p>
+
+<p>Data ostatniej dużej aktualizacji: 23.05.2021.</p>
+
+<p>Strona internetowa jest częściowo zgodna z ustawą o dostępności cyfrowej stron internetowych i aplikacji mobilnych podmiotów publicznych z powodu niezgodności lub wyłączeń wymienionych poniżej.</p>
+
+<p>Treści niedostępne:
+brak opisów alternatywnych i tytułów dla części zdjęć i obrazków,
+część dokumentów PDF posiada błędy w warstwie tekstowej (po skanowaniu/OCR),
+dokumenty tekstowe i tekstowo-graficzne, dokumenty utworzone w programach przeznaczonych do tworzenia prezentacji lub arkuszy kalkulacyjnych nie są poprawnie odczytywane przez programy dla osób niewidzących,
+niektóre formularze nie posiadają dowiązanych etykiet tekstowych,
+brak audiodeskrypcji dla materiałów multimedialnych,
+nieoprawny kontrast dla niektórych elementów strony,</p>
+<p>Wyłączenia:
+filmy opublikowane przed 23 września 2020 r. są wyłączone z obowiązku zapewniania dostępności,
+dokumenty tekstowe i tekstowo-graficzne, dokumenty utworzone w programach przeznaczonych do tworzenia prezentacji lub arkuszy kalkulacyjnych, opublikowane przed dniem 23 września 2018 r. są wyłączone z obowiązku zapewniania dostępności, chyba że ich zawartość jest niezbędna do realizacji zadań podmiotu,
+mapy są wyłączone z obowiązku zapewniania dostępności,
+pliki wytworzone przez inne podmioty niż Urząd Marszałkowski Województwa Łódzkiego i przekazane do publikacji w formie papierowej lub skanów nie są dostępne z uwagi na brak dostępu do danych źródłowych,
+treści archiwalne, niewykorzystywane do realizacji bieżących zadań są wyłączone z obowiązku zapewniania dostępności.</p>
+<p>Deklarację sporządzono dnia: 23.05.2021.</p>
+
+<p>Deklarację została ostatnio poddana przeglądowi i aktualizacji dnia: 23.05.2021.</p>
+
+<p>Deklarację sporządzono na podstawie samooceny przeprowadzonej przez licencjonowanych audytów dostępności.</p>
+
+<p>Na stronie internetowej można korzystać ze standardowych skrótów klawiaturowych.</p>
+
+<p>Informacje zwrotne i dane kontaktowe
+W przypadku problemów z dostępnością strony internetowej prosimy o kontakt. Osobą kontaktową jest koordynator do spraw dostępności cyfrowej Łukasz Czołczyński, abc@angelwings.pl. Kontaktować można się także dzwoniąc na numer telefonu: 42 000 10 10. Tą samą drogą można składać wnioski o udostępnienie informacji niedostępnej oraz składać żądania zapewnienia dostępności. Koordynatorem do spraw dostępności architektonicznej i informacyjno-komunikacyjnej w Angel Wings Sp z o.o. jest Elżbieta Bathory, dostepnosc@angelwins.pl, telefon 42 001 10 10.</p>
+
+<p>Informacje na temat procedury
+Każdy ma prawo do wystąpienia z żądaniem zapewnienia dostępności cyfrowej strony internetowej, aplikacji mobilnej lub jakiegoś ich elementu.</p>
+
+<p>Można także żądać udostępnienia informacji za pomocą alternatywnego sposobu dostępu, na przykład przez odczytanie niedostępnego cyfrowo dokumentu, opisanie zawartości filmu bez audiodeskrypcji itp. Żądanie powinno zawierać dane osoby zgłaszającej żądanie, wskazanie, o którą stronę internetową lub aplikację mobilną chodzi oraz sposób kontaktu.</p>
+
+<p>Jeżeli osoba żądająca zgłasza potrzebę otrzymania informacji za pomocą alternatywnego sposobu dostępu, powinna także określić dogodny dla niej sposób przedstawienia tej informacji.</p>
+
+<p>Zrealizowanie żądanie następuje niezwłocznie, nie później niż w ciągu 7 dni od dnia wystąpienia z żądaniem. Jeżeli dotrzymanie tego terminu nie jest możliwe, niezwłocznie informuje się o tym wnoszącego żądanie, kiedy realizacja żądania będzie możliwa, przy czym termin ten nie może być dłuższy niż 2 miesiące od dnia wystąpienia z żądaniem.</p>
+
+<p>Jeżeli zapewnienie dostępności cyfrowej nie jest możliwe, może zostać zaproponowany alternatywny sposób dostępu do informacji.</p>
+
+<p>W przypadku odmowy realizacji żądania zapewnienia dostępności lub alternatywnego sposobu dostępu do informacji, wnoszący żądanie można złożyć skargę w sprawie zapewniana dostępności cyfrowej strony internetowej, aplikacji mobilnej lub elementu strony internetowej, lub aplikacji mobilnej.</p>
+</div>
+</ng-container>
+<ng-container *ngIf="langEn">
+    <div class="declaration">
+<p> Our travel line undertakes to ensure the availability of its website in accordance with the provisions of the Act of April 4, 2019 on digital accessibility of websites and mobile applications of public entities. The accessibility statement applies to the website of the website </p>
+
+<p> Date of website publication: 5/23/2021. </p>
+
+<p> Date of last major update: 5/23/2021. </p>
+
+<p> The website is partially compliant with the Digital Accessibility Act of Public Entity's Websites and Mobile Applications due to incompatibilities or exemptions listed below. </p>
+
+<p> Content unavailable:
+no alternative descriptions and titles for some photos and pictures,
+some PDF documents have errors in the text layer (after scanning / OCR),
+text and text-graphic documents, documents created in programs designed for creating presentations or spreadsheets are not read correctly by programs for the visually impaired,
+some forms do not have associated text labels,
+no audio description for multimedia materials,
+incorrect contrast for some page elements, </p>
+<p> Exclusions:
+films published before September 23, 2020 are exempt from the obligation to ensure availability,
+text and text-graphic documents, documents created in programs intended for creating presentations or spreadsheets, published before September 23, 2018, are exempt from the obligation to ensure accessibility, unless their content is necessary for the performance of the entity's tasks,
+maps are exempt from the obligation to provide accessibility,
+files created by entities other than the Marshal's Office of the Lodzkie Voivodship and submitted for publication in paper form or scans are not available due to the lack of access to source data,
+archival content not used for the performance of current tasks is excluded from the obligation to ensure availability. </p>
+<p> The declaration was made on: 23/05/2021. </p>
+
+<p> The declaration was last revised and updated on: 5/23/2021. </p>
+
+<p> The declaration is based on a self-assessment by licensed accessibility audits. </p>
+
+<p> Standard keyboard shortcuts can be used on the website. </p>
+
+<p> Feedback and contact details
+In case of problems with the availability of the website, please contact us. The contact person is the digital accessibility coordinator Łukasz Czołczyński, abc@angelwings.pl. You can also contact us by calling the number: 42 000 10 10. The same way you can submit requests for disclosure of unavailable information and request accessibility. Coordinator for architectural, information and communication accessibility at Angel Wings Sp z o.o. is Elżbieta Bathory, dostepnosc@angelwins.pl, telephone number 42 001 10 10. </p>
+
+<p> Information about the procedure
+Everyone has the right to request the digital availability of a website, mobile application or any of their elements. </p>
+
+<p> You can also request information to be made available using an alternative access method, for example by reading a digitally inaccessible document, describing the content of the video without audio description, etc. The request should contain the data of the person submitting the request, indicate which website or mobile application is meant and the method of contact . </p>
+
+<p> If the requesting person reports the need to receive information using an alternative means of access, he should also specify a convenient way for him to present this information. </p>
+
+<p> The request is processed immediately, not later than within 7 days from the date of the request. If it is not possible to meet this deadline, the person submitting the request is immediately informed about it when it will be possible to fulfill the request, and this deadline may not be longer than 2 months from the date of the request. </p>
+
+<p> If digital accessibility is not possible, an alternative means of accessing the information may be proposed. </p>
+
+<p> In the event of a refusal to fulfill a request to provide accessibility or an alternative method of access to information, the person making the request may file a complaint regarding the provision of digital accessibility of the website, mobile application or website element or mobile application. </p>
+</div>
+</ng-container>
+
+<ng-container *ngIf = "langEs">
+    <div class="declaration">
+    <p> Nuestra línea de viajes se compromete a asegurar la disponibilidad de su sitio web de acuerdo con lo establecido en la Ley de 4 de abril de 2019 sobre accesibilidad digital de sitios web y aplicaciones móviles de entidades públicas. La declaración de accesibilidad se aplica al sitio web del sitio web </p>
+    
+    <p> Fecha de publicación del sitio web: 23/05/2021. </p>
+    
+    <p> Fecha de la última actualización importante: 23/05/2021. </p>
+    
+    <p> El sitio web cumple parcialmente con la Ley de accesibilidad digital de los sitios web y aplicaciones móviles de entidades públicas debido a las incompatibilidades o exenciones que se enumeran a continuación. </p>
+    
+    <p> Contenido no disponible:
+    sin descripciones y títulos alternativos para algunas fotos e imágenes,
+    algunos documentos PDF tienen errores en la capa de texto (después de escanear / OCR),
+    Los documentos de texto y gráficos de texto, los documentos creados en programas diseñados para crear presentaciones u hojas de cálculo no son leídos correctamente por programas para discapacitados visuales.
+    algunos formularios no tienen etiquetas de texto asociadas,
+    sin descripción de audio para materiales multimedia,
+    contraste incorrecto para algunos elementos de la página, </p>
+    <p> Exclusiones:
+    Las películas publicadas antes del 23 de septiembre de 2020 están exentas de la obligación de garantizar la disponibilidad.
+    Quedan excluidos de la obligación de asegurar la accesibilidad los documentos de texto y texto gráfico, los documentos creados en programas destinados a la creación de presentaciones u hojas de cálculo, publicados antes del 23 de septiembre de 2018, salvo que su contenido sea necesario para el desempeño de las tareas de la entidad,
+    los mapas están exentos de la obligación de proporcionar accesibilidad,
+    Los archivos creados por entidades distintas a la Oficina del Alguacil de la Voivodía de Lodzkie y enviados para su publicación en papel o escaneados no están disponibles debido a la falta de acceso a los datos de origen,
+    El contenido de archivo, que no se utiliza para la realización de tareas actuales, está exento de la obligación de garantizar la disponibilidad. </p>
+    <p> La declaración se realizó el: 23/05/2021. </p>
+    
+    <p> La declaración se revisó y actualizó por última vez el: 23/05/2021. </p>
+    
+    <p> La declaración se basa en una autoevaluación realizada por auditorías de accesibilidad autorizadas. </p>
+    
+    <p> En el sitio web se pueden utilizar atajos de teclado estándar. </p>
+    
+    <p> Comentarios y detalles de contacto
+    En caso de problemas con la disponibilidad del sitio web, contáctenos. La persona de contacto es el coordinador de accesibilidad digital Łukasz Czołczyński, abc@angelwings.pl. También puede contactarnos llamando al número: 42 000 10 10. De la misma manera puede enviar solicitudes de divulgación de información no disponible y solicitar accesibilidad. Coordinador de accesibilidad arquitectónica, de la información y la comunicación en Angel Wings Sp z o.o. es Elżbieta Bathory, dostepnosc@angelwins.pl, número de teléfono 42 001 10 10. </p>
+    
+    <p> Información sobre el procedimiento
+    Toda persona tiene derecho a solicitar la accesibilidad digital de un sitio web, aplicación móvil o cualquiera de sus elementos. </p>
+    
+    <p> También puede solicitar que la información esté disponible utilizando un método de acceso alternativo, por ejemplo, leyendo un documento digitalmente inaccesible, describiendo el contenido del video sin descripción de audio, etc. La solicitud debe contener los datos de la persona que envía el solicitud, indique a qué sitio web o aplicación móvil se refiere y el método de contacto. </p>
+    
+    <p> Si la persona solicitante informa la necesidad de recibir información utilizando un medio de acceso alternativo, también debe especificar una forma conveniente de presentar esta información. </p>
+    
+    <p> La solicitud se procesa de inmediato, a más tardar dentro de los 7 días posteriores a la fecha de la solicitud. Si no es posible cumplir con este plazo, se informa inmediatamente a la persona que realiza la solicitud cuando será posible cumplir con la solicitud, y este plazo no puede ser superior a 2 meses a partir de la fecha de la solicitud. </p>
+    
+    <p> Si la accesibilidad digital no es posible, se puede proponer un medio alternativo para acceder a la información. </p>
+    
+    <p> En caso de que se niegue a cumplir con una solicitud para proporcionar accesibilidad o un método alternativo de acceso a la información, la persona que realiza la solicitud puede presentar una queja con respecto a la provisión de accesibilidad digital del sitio web, la aplicación móvil o el elemento del sitio web o aplicación móvil. </p>
+</div>
+    </ng-container>
+</div>

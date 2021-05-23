@@ -2,13 +2,16 @@
     background: url("./../../../assets/Img/samolot.jpg") center no-repeat fixed;
     background-size: cover;
     padding: 20vh 0;
+    font-size: 1.2rem;
   }
   
   .search{
   
     margin-left: 5vw;
-    background-color: #1C73D4;
+    background-color:rgba(0, 0, 255, 0.514);
     max-width: 400px;
+    color: white;
+    border-radius: 25px;
   }
   
   .inputs{
@@ -22,4 +25,9 @@
   
   button{
     width: 65%
+  }
+
+  .dark{
+    background-color: black;
+    color: yellow;
   }

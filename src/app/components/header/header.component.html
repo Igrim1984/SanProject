@@ -1,27 +1,40 @@
-<h1>Angel Wings</h1>
+<div class="container" [class.dark]="darkMode" [class.bigFont]="bigFont" [class.letterSpacing]="letterSpacing"
+  [class.lineSpacing]="lineSpacing">
+  
+    <header>
+      <h1>Angel Wings</h1>
 
-<ul>
-  <li>
-    <a routerLink="home">{{ 'nav.homePage' | translate }}</a>
-  </li>
-  <li>
-    <a routerLink="info">{{ 'nav.information' | translate }}</a>
-  </li>
-  <li>
-    <a routerLink="wcag">{{ 'nav.wcag' | translate}}</a>
-  </li>
-  <li>
-    <a routerLink="contact">{{ 'nav.contact' | translate }}</a>
-  </li>
-  <li>{{ 'nav.language' | translate }} <select #langselect (change)="translate.use(langselect.value) " name="" id="">
-      <option *ngFor="let lang of translate.getLangs()" [value]="lang">
-        {{ lang }}
-      </option>
-    </select>
-  </li>
-  <li>
-    <a>{{ 'nav.log' | translate }}</a>
-  </li>
+      <ul>
+        <li>
+          <a routerLink="home">{{ 'nav.homePage' | translate }}</a>
+        </li>
+        <li>
+          <a routerLink="info">{{ 'nav.information' | translate }}</a>
+        </li>
+        <li>
+          <a routerLink="wcag">{{ 'nav.wcag' | translate}}</a>
+        </li>
+        <li>
+          <a routerLink="contact">{{ 'nav.contact' | translate }}</a>
+        </li>
+        <li>{{ 'nav.language' | translate }} <select #langselect (change)="translate.use(langselect.value) " name=""
+            id="">
+            <option *ngFor="let lang of translate.getLangs()" [value]="lang">
+              {{ lang }}
+            </option>
+          </select>
+        </li>
+        <li>
+          <a routerLink="login">{{ 'nav.log' | translate }}</a>
+        </li>
 
 
-</ul>
+      </ul>
+
+    </header>
+    <aside class="clock">
+ 
+        <div>{{day}} {{hour}} : {{minute}} : {{secound}} {{ampm}}</div>
+    </aside>
+  </div>
+

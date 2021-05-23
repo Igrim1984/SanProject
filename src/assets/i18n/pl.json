@@ -6,12 +6,46 @@
       "log" : "Logowanie",
       "language" : "Język",
       "wcag": "Ułatwienia dostępu"
-    },
+        },
     "home": {
         "departure": "Miasto wylotu",
         "arrival": "Miasto przylotu",
         "departuretDate": "Data wylotu",
         "dateOfArrival": "Data przylotu",
-        "passengers": "Liczba pasażerów" 
+        "passengers": "Liczba pasażerów",
+        "goTo": "Przejdź dalej"  
+    },
+    "wcag":{
+      "accesability": "Ułatwienia dostępu",
+      "options": "Opcje dotyczące zmiany wyglądu strony",
+      "contrast": "Wysoki kontrast",
+      "bigFont": "Zwiększona wielkość liter",
+      "letterSpacing": "Zwiększony odstęp pomiędzy literami",
+      "lineSpacing" :"Zwiększony odstęp pomiędzy liniami",
+      "declaration" : "Deklaracja dostępności"
+    },
+    "flight":{
+      "flightInfo":"Dane wybranego lotu",
+      "flightFrom":"Miejsce wylotu",
+      "flightTo":"Miejsce przylotu",
+      "flightDate":"Data wylotu",
+      "returnDate":"Data przylotu",
+      "passangers":"Liczba pasażerów",
+      "data": "Uzupełnij poniższe dane",
+      "name": "Imię",
+      "surname": "Nazwisko",
+      "city": "Miasto",
+      "zipCode": "Kod pocztowy",
+      "street": "Ulica",
+      "houseNb": "Numer Domu",
+      "apartNb": "Numer Mieszkania",
+      "id": "Rodzaj dokumentu",
+      "idNb": "Numer dokumentu",
+      "phone": "Numer kontaktowy",
+      "email": "Adres e-mail",
+      "idPass": "Paszport",
+      "idCard": "Dowód osobisty",
+      "goTo": "Przejdź do wyboru miejsc"  
+  
     }
   }

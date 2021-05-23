@@ -12,6 +12,39 @@
         "arrival": "Destination city",
         "departuretDate": "Departure date",
         "dateOfArrival": "Date of arrival",
-        "passengers": "Number of passengers" 
+        "passengers": "Number of passengers",
+        "goTo": "Go further" 
+    },
+    "wcag":{
+      "accesability": "Facilitate access",
+      "options": "Options for changing the appearance of the page",
+      "contrast": "High contrast",
+      "bigFont": "Large font size",
+      "letterSpacing": "Increased space between letters",
+      "lineSpacing" :"Increased spacing between lines",
+      "declaration" : "Declaration of availability"
+    },
+    "flight":{
+      "flightInfo":"Selected flight data",
+      "flightFrom":"Place of departure",
+      "flightTo":"Place of arrival",
+      "flightDate":"Departure date",
+      "returnDate":"Arrival date",
+      "passangers":"Number of passengers",
+      "data": "Fill in the data below",
+      "name": "Name",
+      "surname": "Surname",
+      "city": "Miasto",
+      "zipCode": "Postal code",
+      "street": "Street",
+      "houseNb": "House Number",
+      "apartNb": "Apartment number",
+      "id": "Document type",
+      "idNb": "Document number",
+      "phone": "Contact number",
+      "email": "E-mail adress",
+      "idPass": "Passport",
+      "idCard": "ID card",
+      "goTo": "Go to seat selection" 
     }
   }

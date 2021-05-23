@@ -14,6 +14,10 @@ import { WcagComponent } from './components/wcag/wcag.component';
 import { InfoComponent } from './components/info/info.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FlightDetailsComponent } from './components/flight-details/flight-details.component';
+import { SeatReservationComponent } from './components/seat-reservation/seat-reservation.component';
+import { LoginComponent } from './components/login/login.component';
+import { WeatherComponent } from './components/weather/weather.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -28,7 +32,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     WcagComponent,
     InfoComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    FlightDetailsComponent,
+    SeatReservationComponent,
+    LoginComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
