@@ -11,27 +11,30 @@
 
       <ul>
         <li>
-          <select style="width: 100%" #whereFrom>
-            <option [value]="homeCity.name" *ngFor="let homeCity of homeCities">
+          <select style="width: 100%" (change)="changeWhereFrom()" [(ngModel)]="whereFrom">
+            <option [value]="homeCity.name" *ngFor="let homeCity of homeCities" >
               {{homeCity.name}}
             </option>
           </select>
         </li>
         <li>
-          <select style="width: 100%" #whereTo>
+          <select style="width: 100%" [(ngModel)]="whereTo" (change)="changeWhereTo()">
             <option [value]="homeCity.name" *ngFor="let homeCity of homeCities">
               {{homeCity.name}}
             </option>
           </select>
         </li>
-        <li><input type="date"  #whenFrom/></li>
-        <li><input type="date" #whenReturn/></li>
-        <li><input style="width: 100%" type="number" min="1" max="9" #passangers/></li>
+        <li><input type="date" [(ngModel)]="whenFrom"/></li>
+        <li><input type="date" [(ngModel)]="whenReturn"/></li>
+        <li><input style="width: 100%" type="number" min="1" max="9" [(ngModel)]="passengers"/></li>
       </ul>
     </div>
     <div style="text-align: center; padding-bottom: 3vh;">
-      <button (click)="getDataFromForm()" class="btn">{{ 'home.goTo' |translate}}</button>
+      <button class="btn" routerLink="/flight" (click)="getDataFrom()">{{'home.goTo' | translate}}</button>
     </div>
   </div>
+  <div class="weather">
+    <app-weather></app-weather>
+  </div>
 </div>
-<app-weather></app-weather>
+

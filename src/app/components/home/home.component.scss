@@ -3,6 +3,7 @@
     background-size: cover;
     padding: 20vh 0;
     font-size: 1.2rem;
+    display: grid;
   }
   
   .search{
@@ -12,6 +13,11 @@
     max-width: 400px;
     color: white;
     border-radius: 25px;
+    grid-column: 1/6;
+  }
+
+  .weather{
+    grid-column: 7/12;
   }
   
   .inputs{

@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ViewChild } from '@angular/core';
+import { HomeComponent } from '../components/home/home.component';
 
 @Injectable({
   providedIn: 'root'
@@ -10,5 +11,6 @@ export class FlightDetailsService {
   whereTo;
   whenFrom;
   whenReturn;
-  passangers;
+  passengers;
+
 }
