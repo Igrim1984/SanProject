@@ -9,23 +9,50 @@ import { HomeComponent } from './../home/home.component';
 })
 export class WeatherComponent implements OnInit {
 
-  whereFrom: any
+  whereFrom: any;
+  whereTo:any;
+  whereFromArray;
+
 
   constructor(
-    public fromData: FlightDetailsService, 
+    public fromData: FlightDetailsService
   ) { }
 
-  ngOnInit(): void {}
 
-  getData() {
-    this.whereFrom = this.fromData.whereFrom;
+  ngOnInit(): void {
+
+  }
+  log() {
+    console.log(this.whereFromArray)
+  }
+  getDataFrom() {
+    this.whereFrom = this.fromData.whereFrom
     console.log(this.whereFrom)
-    fetch(`https://community-open-weather-map.p.rapidapi.com/find?q=${this.fromData.whenFrom}cnt=1&mode=null&lon=0&type=link%2C%20accurate&lat=0&units=imperial%2C%20metric`, {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-key": "3b8e40e930mshf5781c1d8947291p1bbca2jsn80dc425cb20a",
-        "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
-      }
+    fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${this.whereFrom}&lat=0&lon=0&lang=pl&units=%22metric%22`, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "3b8e40e930mshf5781c1d8947291p1bbca2jsn80dc425cb20a",
+		"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
+	}
+    })
+    .then(response => {
+      return response.json();
+    })
+    .then(response => console.log(response))
+    .catch(err => {
+      console.error(err);
+    });
+
+   }
+  getDataTo() {
+    this.whereTo = this.fromData.whereTo
+    console.log(this.whereTo)
+    fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${this.whereTo}&lat=0&lon=0&callback=test&id=2172797&lang=pl&units=%22metric%22&mode=xml%2C%20html`, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "3b8e40e930mshf5781c1d8947291p1bbca2jsn80dc425cb20a",
+		"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
+	}
     })
     .then(response => response.json()) 
     .then(response => {

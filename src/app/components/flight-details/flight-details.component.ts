@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FlightDetailsService } from '../../services/flight-details.service';
 import { WcagService } from './../../services/wcag.service';
 import { Router } from '@angular/router';
+import { NbpService } from './../../services/nbp.service'
+import { observable, Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-flight-details',
@@ -14,10 +16,14 @@ export class FlightDetailsComponent implements OnInit {
   bigFont = false;
   letterSpacing = false;
   lineSpacing = false;
+  result: any
+  result2: any
+
   constructor(
     public formData: FlightDetailsService,
     private wcag:WcagService,
-    private route:Router
+    private route:Router,
+    private currency:NbpService
   ) { }
 
   ngOnInit(): void {
@@ -31,4 +37,12 @@ export class FlightDetailsComponent implements OnInit {
   goToSeat() {
     this.route.navigate(["seat"])
   }
+  getCurrency() {
+    this.result = this.currency.getCurrency().subscribe(result => {
+      this.result2 = Object(result).rates[0]});
+      console.log(this.result2)
+ 
+  
+  }
+  
 }

@@ -7,7 +7,9 @@
        <li>{{'flight.flightTo' | translate}}:  {{ formData.whereTo }}</li>
        <li>{{'flight.flightDate' | translate}}:  {{ formData.whenFrom }}</li>
        <li>{{'flight.returnDate' | translate}}:  {{ formData.whenReturn }}</li>
-       <li>{{'flight.passangers' | translate}}:  {{ formData.passangers }}</li>
+       <li>{{'flight.passangers' | translate}}:  {{ formData.passengers }}</li>
+       <div *ngFor="let item of result">{{item}}</div>
+       <button (click)="getCurrency()">Przelicz</button>
 
      </ul>
 
@@ -30,5 +32,8 @@
        <li>{{ 'flight.idNb' | translate}}: <input type="text" name="" id=""></li>
        <li>{{ 'flight.phone' | translate}}: <input type="text" name="" id=""></li>
      </ul>
+     <button type="button" routerLink="/home" class="btn">{{'main.return' | translate}}</button>
      <button type="button" (click)="goToSeat()" class="btn">{{'flight.goTo' | translate}}</button>
    </div>
+
+   <app-weather></app-weather>

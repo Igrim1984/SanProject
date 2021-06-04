@@ -12,11 +12,11 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
 
-  @ViewChild("whereFrom") whereFrom:any;
-  @ViewChild("whereTo") whereTo:any;
-  @ViewChild("whenFrom") whenFrom:any;
-  @ViewChild("whenReturn") whenReturn:any;
-  @ViewChild("passangers") passangers: any;
+  whereFrom:any;
+  whereTo:any;
+  whenFrom:any;
+  whenReturn:any;
+  passengers: any;
 
   darkMode = false;
   bigFont = false;
@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
   
   homeCities:any[] = homeCitiesExport;
 
+  whereFroms: string;
   ngOnInit(): void {
   }
   ngDoCheck(){
@@ -40,13 +41,21 @@ export class HomeComponent implements OnInit {
     this.letterSpacing = this.wcag.letterSpacing
     this.lineSpacing = this.wcag.lineSpacing
   }
-  getDataFromForm(){
-    this.formData.whereFrom = this.whereFrom.nativeElement.value;
-    this.formData.whereTo = this.whereTo.nativeElement.value;
-    this.formData.whenFrom = this.whenFrom.nativeElement.value;
-    this.formData.whenReturn = this.whenReturn.nativeElement.value;
-    this.formData.passangers = this.passangers.nativeElement.value;
+  getDataFrom(){
+    this.formData.whereFrom = this.whereFrom;
+    this.formData.whereTo = this.whereTo;
+    this.formData.whenFrom = this.whenFrom;
+    this.formData.whenReturn = this.whenReturn;
+    this.formData.passengers = this.passengers;
 
     this.route.navigate(["flight"])
   }
+  changeWhereFrom() {
+      this.formData.whereFrom = this.whereFrom;
+      console.log(this.whereFrom, this.whereTo);
+  }
+  changeWhereTo() {
+    this.formData.whereTo = this.whereTo;
+    console.log(this.whereFrom, this.whereTo);
+}
 }
