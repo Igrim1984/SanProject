@@ -1,8 +1,16 @@
 <div class="main">
-<div class="weatherFrom">
-    <p>Temperatura: {{whereFromArray}} </p>
-</div>
-<button (click)="getDataFrom()">click</button>
-<button (click)="getDataTo()">click</button>
-<button (click)="log()">click</button>
-</div>
+    <button class="btn" (click)="getDataFrom();getDataTo()">Pokaż pogodę</button>
+    <div class="weatherFrom">
+        <h2>Miasto wylotu: {{whereFrom}}</h2>
+        <p>Temperatura: <span id="temp"></span></p>
+        <p>Wilgotność powietrza: <span id="humidity"></span></p>
+        <p>Ciśnienie: <span id="pressure"></span></p>
+        
+        <h2>Miasto przylotu: {{whereTo}}</h2>
+        <p>Temperatura: <span id="temp2"></span></p>
+        <p>Wilgotność powietrza: <span id="humidity2"></span></p>
+        <p>Ciśnienie: <span id="pressure2"></span></p>
+    
+    </div>
+
+    </div>

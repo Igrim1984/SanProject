@@ -52,10 +52,10 @@ export class HomeComponent implements OnInit {
   }
   changeWhereFrom() {
       this.formData.whereFrom = this.whereFrom;
-      console.log(this.whereFrom, this.whereTo);
+
   }
   changeWhereTo() {
     this.formData.whereTo = this.whereTo;
-    console.log(this.whereFrom, this.whereTo);
+
 }
 }

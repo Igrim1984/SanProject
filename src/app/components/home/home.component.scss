@@ -3,23 +3,24 @@
     background-size: cover;
     padding: 20vh 0;
     font-size: 1.2rem;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   
   .search{
   
     margin-left: 5vw;
     background-color:rgba(0, 0, 255, 0.514);
-    max-width: 400px;
+    min-width: 400px;
+    padding: 10px;
     color: white;
     border-radius: 25px;
-    grid-column: 1/6;
+    margin-bottom: 5vh;
+
   }
 
-  .weather{
-    grid-column: 7/12;
-  }
-  
+ 
   .inputs{
     display: flex;
   }
