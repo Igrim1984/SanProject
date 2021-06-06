@@ -48,6 +48,16 @@
     "email": "Dirección de correo electrónico",
     "idPass": "Pasaporte",
     "idCard": "Tarjeta de identificación",
-    "goTo": "Ir a la selección de asientos"
+    "goTo": "Ir a la selección de asientos",
+    "currency": "Tipo de cambio actual del USD",
+    "getCurrency": "Obtenga el tipo de cambio actual del USD"
+  },
+  "weather":{
+    "weather": "Mostrar el tiempo",
+    "cityFrom": "Ciudad de salida",
+    "cityTo": "Ciudad de llegada",
+    "temp": "Temperatura",
+    "humidity": "Humedad del aire",
+    "pressure": "Presión"
   }
 }

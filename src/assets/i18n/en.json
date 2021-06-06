@@ -48,6 +48,17 @@
     "email": "E-mail adress",
     "idPass": "Passport",
     "idCard": "ID card",
-    "goTo": "Go to seat selection"
+    "goTo": "Go to seat selection",
+    "currency": "Current USD exchange rate",
+    "getCurrency": "Get the current USD exchange rate"
+  },
+  "weather":{
+      "weather": "Show weather",
+      "cityFrom": "Departure city",
+      "cityTo": "Arrival city",
+      "temp": "Temperature",
+      "humidity": "Air humidity",
+      "pressure": "Pressure"
+    }
   }
-}
+

@@ -8,8 +8,8 @@
        <li>{{'flight.flightDate' | translate}}:  {{ formData.whenFrom }}</li>
        <li>{{'flight.returnDate' | translate}}:  {{ formData.whenReturn }}</li>
        <li>{{'flight.passangers' | translate}}:  {{ formData.passengers }}</li>
-       <div *ngFor="let item of result">{{item}}</div>
-       <button (click)="getCurrency()">Przelicz</button>
+       <div>{{'flight.currency' | translate}} to: {{this.result2}} PLN</div>
+       <button class="btn" (click)="getCurrency()">{{'flight.getCurrency' | translate}}</button>
 
      </ul>
 

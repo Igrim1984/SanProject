@@ -3,7 +3,7 @@ import { FlightDetailsService } from '../../services/flight-details.service';
 import { WcagService } from './../../services/wcag.service';
 import { Router } from '@angular/router';
 import { NbpService } from './../../services/nbp.service'
-import { observable, Subscriber } from 'rxjs';
+
 
 @Component({
   selector: 'app-flight-details',
@@ -39,9 +39,8 @@ export class FlightDetailsComponent implements OnInit {
   }
   getCurrency() {
     this.result = this.currency.getCurrency().subscribe(result => {
-      this.result2 = Object(result).rates[0]});
+      this.result2 = Object(result).rates[0].mid});
       console.log(this.result2)
- 
   
   }
   

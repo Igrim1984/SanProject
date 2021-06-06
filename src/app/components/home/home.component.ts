@@ -4,6 +4,7 @@ import { WcagService} from './../../services/wcag.service'
 import { FlightDetailsService } from './../../services/flight-details.service'
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -33,7 +34,10 @@ export class HomeComponent implements OnInit {
   homeCities:any[] = homeCitiesExport;
 
   whereFroms: string;
-  ngOnInit(): void {
+  ngOnInit(
+    
+  ): void {
+    this.flightSearch()
   }
   ngDoCheck(){
     this.darkMode = this.wcag.darkMode
@@ -57,5 +61,22 @@ export class HomeComponent implements OnInit {
   changeWhereTo() {
     this.formData.whereTo = this.whereTo;
 
+}
+
+flightSearch(){
+  fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/PL/PLN/en-US/SFO-sky/jfk/2021-06-06?inboundpartialdate=2021-06-08", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "3b8e40e930mshf5781c1d8947291p1bbca2jsn80dc425cb20a",
+		"x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
+	}
+})
+.then(response => {return response.json()})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
 }
 }

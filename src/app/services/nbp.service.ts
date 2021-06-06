@@ -12,8 +12,8 @@ export class NbpService {
     private http:HttpClient
   ) { }
 
-  getCurrency(): Observable<Object[]> {
-    return this.http.get<Object[]>(`http://api.nbp.pl/api/exchangerates/tables/a/?format=json`).
+  getCurrency(){
+    return this.http.get(`http://api.nbp.pl/api/exchangerates/rates/a/usd/?format=json`).
       pipe(tap(console.log));
   }
 }

@@ -48,7 +48,16 @@
     "email": "Adres e-mail",
     "idPass": "Paszport",
     "idCard": "Dowód osobisty",
-    "goTo": "Przejdź do wyboru miejsc"
-
+    "goTo": "Przejdź do wyboru miejsc",
+    "currency": "Aktualny kurs USD",
+    "getCurrency": "Pobierz aktualny kurs USD"
+  },
+  "weather":{
+    "weather": "Pokaż pogodę",
+    "cityFrom":"Miasto wylotu",
+    "cityTo": "Miasto przylotu",
+    "temp": "Temperatura",
+    "humidity":"Wilgotność powietrza",
+    "pressure": "Ciśnienie"
   }
 }

@@ -1,15 +1,16 @@
 <div class="main">
-    <button class="btn" (click)="getDataFrom();getDataTo()">Pokaż pogodę</button>
+    <button class="btn" (click)="getDataFrom();getDataTo()">{{'weather.weather' | translate}}</button>
     <div class="weatherFrom">
-        <h2>Miasto wylotu: {{whereFrom}}</h2>
-        <p>Temperatura: <span id="temp"></span></p>
-        <p>Wilgotność powietrza: <span id="humidity"></span></p>
-        <p>Ciśnienie: <span id="pressure"></span></p>
+        <h2>{{'weather.cityFrom' | translate}}: {{whereFrom}}</h2>
+        <p>{{'weather.temp' | translate}}: <span id="temp"></span></p>
+        <p>{{'weather.humidity' | translate}}: <span id="humidity"></span></p>
+        <p>{{'weather.pressure' | translate}}: <span id="pressure"></span></p>
         
-        <h2>Miasto przylotu: {{whereTo}}</h2>
-        <p>Temperatura: <span id="temp2"></span></p>
-        <p>Wilgotność powietrza: <span id="humidity2"></span></p>
-        <p>Ciśnienie: <span id="pressure2"></span></p>
+        <h2>{{'weather.cityTo' | translate}}: {{whereTo}}</h2>
+        <p>{{'weather.temp' | translate}}: <span id="temp2"></span></p>
+        <p>{{'weather.humidity' | translate}}: <span id="humidity2"></span></p>
+        <p>{{'weather.pressure' | translate}}: <span id="pressure2"></span></p>
+
     
     </div>
 

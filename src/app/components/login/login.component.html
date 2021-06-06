@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div class="container">
+    <div>Aktualnie mamy jednego użytwonika: "jan.kowalski@gmail.com" i hasło: "qwerty"</div>
+<ul class="login">
+    <li>
+    <label for="email">Podaj swój adres e-mail: </label>
+    <input type="email" id="email" [(ngModel)]="userEmail">
+</li>
+<li>
+    <label fro="password">Podaj swoje hasło: </label>
+    <input type="password" id="password" [(ngModel)]="userPassword">
+</li>
+    <button class="btn" (click)="logIn()">Zaloguj</button>
+    <ng-template *ngIf="noLogin">
+        Wprowadzono niepoprawny email lub hasło
+    </ng-template>
+</ul>
+</div>

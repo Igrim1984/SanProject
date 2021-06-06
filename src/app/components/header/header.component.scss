@@ -1,7 +1,15 @@
+.container{
+    height: 180px
+}
+
 h1{
     text-align: center;
 }
-
+img{
+    height: 120px;
+    width: 120px;
+    transform: translateY(-50%);
+}
 .clock{
 
     position: absolute;
