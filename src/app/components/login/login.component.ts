@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 import { usersExports} from './users'
+
 
 @Component({
   selector: 'app-login',
@@ -9,12 +11,12 @@ import { usersExports} from './users'
 export class LoginComponent implements OnInit {
 
   users = usersExports;
-  userEmail: any; 
+  userEmail: string; 
   userPassword: any;
-  login: any;
-  noLogin: false
-  constructor() { 
-    
+  login = false;
+  constructor(
+    private loginService: LoginService 
+  ) { 
   }
 
   ngOnInit(): void {
@@ -22,10 +24,14 @@ export class LoginComponent implements OnInit {
 
     logIn() {
       if (this.userEmail == "jan.kowalski@gmail.com" && this.userPassword == "qwerty") {
+        this.userEmail = this.loginService.email
         alert('Zalogowano poprawnie')
+        this.loginService.login = true;
+        this.login = this.loginService.login
+     
+        console.log(this.userEmail)
 
       } else {
-      !this.noLogin
       alert('Podano niepoprawny adres email lub hasło')
     }}
 }

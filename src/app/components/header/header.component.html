@@ -4,9 +4,9 @@
     <header>
       <h1>Angel Wings</h1>
 
-      <ul>
+      <ul class="menu">
         <li>
-          <a routerLink="home"><img src="./../../../assets/Img/logo Lucas.png" alt="logo"></a>
+          <a routerLink="home" class="logo"><img src="./../../../assets/Img/logo Lucas.png" alt="logo"></a>
         </li>
         <li>
           <a routerLink="info">{{ 'nav.information' | translate }}</a>
@@ -36,5 +36,13 @@
  
         <div>{{day}} {{hour}} : {{minute}} : {{secound}} {{ampm}}</div>
     </aside>
+    <ng-container *ngIf="login">
+      
+      <div class="login">
+
+    <p>ZALOGOWANO</p>  
+    <button class="logout" (click)=logOut()>Wyloguj</button> 
+      </div>
+    </ng-container>
   </div>
 

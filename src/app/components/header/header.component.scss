@@ -1,5 +1,6 @@
 .container{
-    height: 180px
+    height: 30vh;
+
 }
 
 h1{
@@ -16,13 +17,37 @@ img{
     right: 1vw;
     top: 1vh;
 }
+.login{
+    position: absolute;
+    position: fixed;
+    top: 1vh;
+    left: 1vw;
+    font-size: 8px;
+    padding: 2px 5px;
+    border: 2px solid white;
+    background-color: blue;
+    text-align: center;
+    border-radius: 6px;
+}
+.logout{
+    background-color: yellow;
+    padding: 2px;
+    font-size: 8px;
+    font-weight: bold;
+    border: 2px solid blue
+}
+.logo{
+    display: unset;
+}
 
 ul {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     list-style: none;
     flex-wrap: wrap;
     gap: 15px;
+    text-align: center;
 }
 
 a {
@@ -32,4 +57,17 @@ a {
 
 a:hover{
     color: yellow
+}
+
+@media (max-width: 790px) { 
+    .container {
+        height: 55vh;
+    }
+    .menu{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .logo{
+        display: none;
+    }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
+import { LoginService } from 'src/app/services/login.service';
 import { WcagService } from './../../services/wcag.service'
 
 @Component({
@@ -18,13 +18,17 @@ export class HeaderComponent implements OnInit {
   public secound: any;
   public ampm: string;
   public day: string;
+
+  login = false;
   darkMode = false;
   bigFont = false;
   letterSpacing = false;
   lineSpacing = false;
+  email=""
   constructor(
     private wcag:WcagService,
-    public translate:TranslateService
+    public translate:TranslateService,
+    private fromLogin: LoginService
   ) {
     translate.addLangs(["pl","en","es"]);
   // translate.setDefaultLang("pl");
@@ -59,6 +63,13 @@ export class HeaderComponent implements OnInit {
     this.bigFont = this.wcag.bigFont
     this.letterSpacing = this.wcag.letterSpacing
     this.lineSpacing = this.wcag.lineSpacing
+    this.login = this.fromLogin.login
+    this.email = this.fromLogin.email
+    console.log(this.login, this.email)
+  }
+  logOut() {
+    this.login = false;
+    this.fromLogin.login = this.login
   }
 }
 
