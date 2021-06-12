@@ -1,13 +1,87 @@
 <div [class.dark]="darkMode" [class.bigFont]="bigFont" [class.letterSpacing]="letterSpacing"
-[class.lineSpacing]="lineSpacing" class="main" >
-    <h1>Watro zobaczyć:</h1>
-    <h2>Sir Lanka</h2>
-    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus soluta accusantium iste veniam ullam atque, odio praesentium saepe ab magni culpa. Facilis, aspernatur officia aperiam numquam consequatur maiores quaerat voluptatum ab velit magni! Dolore est laudantium consectetur eveniet dicta error impedit nulla deserunt quis distinctio numquam repellat, dolorum suscipit eos consequuntur totam voluptatum, ipsum temporibus, eaque reiciendis tempora. Delectus id, illo magnam eius optio accusamus facere velit ex sit deserunt exercitationem perferendis enim ipsum unde, sapiente quo cum libero autem recusandae voluptates? Ratione, laborum. Sit itaque dolorem magni dignissimos, voluptas non similique! Minima dignissimos deleniti alias facilis illum quae sit fugiat laborum asperiores quaerat praesentium pariatur at dolor exercitationem quam ut cum blanditiis debitis possimus cupiditate, impedit quisquam assumenda? Tenetur magni ab expedita nostrum eligendi, voluptates in modi nihil optio cupiditate eos ipsam dignissimos tempora omnis nemo maxime? Voluptatum doloremque, aliquid at possimus neque in asperiores accusantium quisquam! Nesciunt hic quisquam possimus? Suscipit saepe aspernatur unde vitae quia rem, eos illum debitis quaerat magnam esse neque enim ab et nam nihil! Voluptates, mollitia. Fugiat eos facilis dolore atque ad, illum harum expedita tempore aut voluptates, quam at cumque facere rerum tenetur maiores? Quaerat modi minus molestias, consequuntur sed porro accusantium?</div>
-    <iframe width="956" height="538" src="https://www.youtube.com/embed/UqPlbzT39g8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  [class.lineSpacing]="lineSpacing" class="main">
+  <h1>Watro zobaczyć:</h1>
+  <h2>Sir Lanka</h2>
+  <ng-container *ngIf="lang=='pl'">
+     <p> Sri Lanka – “Łza Indii” to niesamowity kraj położony na wyspie Cejlon pełen przyrody,
+    interesujących miejsc i serdecznych ludzi. Możemy zobaczyć tu historyczne miasta, starożytne świątynie i oryginalne,
+    kolonialne budynki. Ponadto warto wybrać się do licznych parków narodowych, gdzie podczas safari jak mamy szczęście
+    zobaczymy dziką zwierzynę oraz poznamy roślinność, z których robi się produkty, które używamy, na co dzień. Warto
+    spędzić trochę czasu z Tamilkami na plantacjach herbaty poznając proces powstawania i zbioru naszego ulubionego
+    napoju, zdobyć kilka górskich szczytów, zejść pod ziemię z górnikami, aby poszukać szafirów czy przejechać się
+    koleją z niesamowitymi widokami. Na koniec trzeba też poznać plaże, posurfować na falach czy wybrać się na
+    fotograficzne “polowanie” na wieloryby.</p>
+    <p> Sri Lanka to przede wszystkim niesamowici ludzie, których otwartość i serdeczność będę na zawsze pamiętał. Do tego
+    należy dołożyć piękne piaszczyste plaże, tropikalne owoce i pyszne, ostre curry i już chce się tam wrócić.
+    Sri Lanka (zaraz obok Tajlandii) to kraj, który zawsze polecam znajomym, którzy chcieliby wybrać się pierwszy raz do
+    Azji, gdyż jest bardzo przyjazna turystom. Jest bardzo bezpiecznie, łatwo tu o nocleg, nie ma problemów z
+    transportem, a na każdym kroku są ludzie, którzy chętnie nam pomogą lub doradzą.</p></ng-container>
+  <ng-container *ngIf="lang == 'en'"> <p> Sri Lanka - "The Tear of India" is an amazing country located on the island of
+    Ceylon, full of nature, interesting places and cordial people. We can see historical cities, ancient temples and
+    original colonial buildings. In addition, it is worth going to numerous national parks, where during the safari, as
+    we are lucky, we will see wild animals and get to know the vegetation, which are used to make products that we use
+    every day. It is worth spending some time with Tamils ​​on tea plantations, learning about the process of creating
+    and harvesting our favorite drink, climbing a few mountain peaks, going underground with miners to look for
+    sapphires or take a train ride with amazing views. At the end, you also need to get to know the beaches, surf the
+    waves or go for a photographic "hunting" of whales. </p>
+    <p>Sri Lanka is above all amazing people whose openness and kindness I will remember forever. To this you need to add
+    beautiful sandy beaches, tropical fruit and delicious, spicy curry and you want to go back there.
+    Sri Lanka (right next to Thailand) is a country that I always recommend to friends who would like to go to Asia for
+    the first time, because it is very tourist-friendly. It is very safe, it is easy to find accommodation here, there
+    are no problems with transport, and there are people at every step who will be happy to help or advise us.</p>
+    </ng-container>
+    <ng-container *ngIf="lang == 'es'"> <p>Sri Lanka - "The Tear of India" es un país increíble ubicado en la isla de
+      Ceilán, lleno de naturaleza, lugares interesantes y gente cordial. Podemos ver ciudades históricas, templos
+      antiguos y edificios coloniales originales. Además, vale la pena ir a numerosos parques nacionales, donde durante
+      el safari, como tenemos la suerte, veremos animales salvajes y conoceremos la vegetación, que se utiliza para
+      elaborar productos que usamos todos los días. Vale la pena pasar un tiempo con las niñas tamiles en las
+      plantaciones de té, aprender sobre el proceso de creación y cosecha de nuestra bebida favorita, escalar algunos
+      picos de montañas, ir a la clandestinidad con mineros en busca de zafiros o dar un paseo en tren con vistas
+      increíbles. Al final, también es necesario conocer las playas, surfear las olas o realizar una "caza" fotográfica
+      de ballenas. </p>
+      <p> Sri Lanka es, sobre todo, gente increíble cuya franqueza y amabilidad recordaré por siempre. A esto debe agregar
+      hermosas playas de arena, frutas tropicales y un curry delicioso y picante y desea volver allí.
+      Sri Lanka (justo al lado de Tailandia) es un país que siempre recomiendo a mis amigos que quieran ir a Asia por
+      primera vez, porque es muy amigable para los turistas. Es muy seguro, es fácil encontrar alojamiento aquí, no hay
+      problemas de transporte, y hay personas que estarán encantadas de ayudarnos o aconsejarnos en cada paso. </p>
+    </ng-container>
+    <iframe width="956" height="538" src="https://www.youtube.com/embed/UqPlbzT39g8" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
     <h2>Tokyo</h2>
-    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus soluta accusantium iste veniam ullam atque, odio praesentium saepe ab magni culpa. Facilis, aspernatur officia aperiam numquam consequatur maiores quaerat voluptatum ab velit magni! Dolore est laudantium consectetur eveniet dicta error impedit nulla deserunt quis distinctio numquam repellat, dolorum suscipit eos consequuntur totam voluptatum, ipsum temporibus, eaque reiciendis tempora. Delectus id, illo magnam eius optio accusamus facere velit ex sit deserunt exercitationem perferendis enim ipsum unde, sapiente quo cum libero autem recusandae voluptates? Ratione, laborum. Sit itaque dolorem magni dignissimos, voluptas non similique! Minima dignissimos deleniti alias facilis illum quae sit fugiat laborum asperiores quaerat praesentium pariatur at dolor exercitationem quam ut cum blanditiis debitis possimus cupiditate, impedit quisquam assumenda? Tenetur magni ab expedita nostrum eligendi, voluptates in modi nihil optio cupiditate eos ipsam dignissimos tempora omnis nemo maxime? Voluptatum doloremque, aliquid at possimus neque in asperiores accusantium quisquam! Nesciunt hic quisquam possimus? Suscipit saepe aspernatur unde vitae quia rem, eos illum debitis quaerat magnam esse neque enim ab et nam nihil! Voluptates, mollitia. Fugiat eos facilis dolore atque ad, illum harum expedita tempore aut voluptates, quam at cumque facere rerum tenetur maiores? Quaerat modi minus molestias, consequuntur sed porro accusantium?</div>
-    <iframe width="956" height="538" src="https://www.youtube.com/embed/9FARBtN7Hiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus soluta accusantium iste veniam ullam atque,
+      odio praesentium saepe ab magni culpa. Facilis, aspernatur officia aperiam numquam consequatur maiores quaerat
+      voluptatum ab velit magni! Dolore est laudantium consectetur eveniet dicta error impedit nulla deserunt quis
+      distinctio numquam repellat, dolorum suscipit eos consequuntur totam voluptatum, ipsum temporibus, eaque
+      reiciendis tempora. Delectus id, illo magnam eius optio accusamus facere velit ex sit deserunt exercitationem
+      perferendis enim ipsum unde, sapiente quo cum libero autem recusandae voluptates? Ratione, laborum. Sit itaque
+      dolorem magni dignissimos, voluptas non similique! Minima dignissimos deleniti alias facilis illum quae sit fugiat
+      laborum asperiores quaerat praesentium pariatur at dolor exercitationem quam ut cum blanditiis debitis possimus
+      cupiditate, impedit quisquam assumenda? Tenetur magni ab expedita nostrum eligendi, voluptates in modi nihil optio
+      cupiditate eos ipsam dignissimos tempora omnis nemo maxime? Voluptatum doloremque, aliquid at possimus neque in
+      asperiores accusantium quisquam! Nesciunt hic quisquam possimus? Suscipit saepe aspernatur unde vitae quia rem,
+      eos illum debitis quaerat magnam esse neque enim ab et nam nihil! Voluptates, mollitia. Fugiat eos facilis dolore
+      atque ad, illum harum expedita tempore aut voluptates, quam at cumque facere rerum tenetur maiores? Quaerat modi
+      minus molestias, consequuntur sed porro accusantium?</div>
+    <iframe width="956" height="538" src="https://www.youtube.com/embed/9FARBtN7Hiw" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
     <h2>Mexicco</h2>
-    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus soluta accusantium iste veniam ullam atque, odio praesentium saepe ab magni culpa. Facilis, aspernatur officia aperiam numquam consequatur maiores quaerat voluptatum ab velit magni! Dolore est laudantium consectetur eveniet dicta error impedit nulla deserunt quis distinctio numquam repellat, dolorum suscipit eos consequuntur totam voluptatum, ipsum temporibus, eaque reiciendis tempora. Delectus id, illo magnam eius optio accusamus facere velit ex sit deserunt exercitationem perferendis enim ipsum unde, sapiente quo cum libero autem recusandae voluptates? Ratione, laborum. Sit itaque dolorem magni dignissimos, voluptas non similique! Minima dignissimos deleniti alias facilis illum quae sit fugiat laborum asperiores quaerat praesentium pariatur at dolor exercitationem quam ut cum blanditiis debitis possimus cupiditate, impedit quisquam assumenda? Tenetur magni ab expedita nostrum eligendi, voluptates in modi nihil optio cupiditate eos ipsam dignissimos tempora omnis nemo maxime? Voluptatum doloremque, aliquid at possimus neque in asperiores accusantium quisquam! Nesciunt hic quisquam possimus? Suscipit saepe aspernatur unde vitae quia rem, eos illum debitis quaerat magnam esse neque enim ab et nam nihil! Voluptates, mollitia. Fugiat eos facilis dolore atque ad, illum harum expedita tempore aut voluptates, quam at cumque facere rerum tenetur maiores? Quaerat modi minus molestias, consequuntur sed porro accusantium?</div>
-    <iframe width="956" height="538" src="https://www.youtube.com/embed/_gWGwPp09CA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus soluta accusantium iste veniam ullam atque,
+      odio praesentium saepe ab magni culpa. Facilis, aspernatur officia aperiam numquam consequatur maiores quaerat
+      voluptatum ab velit magni! Dolore est laudantium consectetur eveniet dicta error impedit nulla deserunt quis
+      distinctio numquam repellat, dolorum suscipit eos consequuntur totam voluptatum, ipsum temporibus, eaque
+      reiciendis tempora. Delectus id, illo magnam eius optio accusamus facere velit ex sit deserunt exercitationem
+      perferendis enim ipsum unde, sapiente quo cum libero autem recusandae voluptates? Ratione, laborum. Sit itaque
+      dolorem magni dignissimos, voluptas non similique! Minima dignissimos deleniti alias facilis illum quae sit fugiat
+      laborum asperiores quaerat praesentium pariatur at dolor exercitationem quam ut cum blanditiis debitis possimus
+      cupiditate, impedit quisquam assumenda? Tenetur magni ab expedita nostrum eligendi, voluptates in modi nihil optio
+      cupiditate eos ipsam dignissimos tempora omnis nemo maxime? Voluptatum doloremque, aliquid at possimus neque in
+      asperiores accusantium quisquam! Nesciunt hic quisquam possimus? Suscipit saepe aspernatur unde vitae quia rem,
+      eos illum debitis quaerat magnam esse neque enim ab et nam nihil! Voluptates, mollitia. Fugiat eos facilis dolore
+      atque ad, illum harum expedita tempore aut voluptates, quam at cumque facere rerum tenetur maiores? Quaerat modi
+      minus molestias, consequuntur sed porro accusantium?</div>
+    <iframe width="956" height="538" src="https://www.youtube.com/embed/_gWGwPp09CA" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
 </div>

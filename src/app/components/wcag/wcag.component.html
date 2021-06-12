@@ -26,13 +26,13 @@
 <h3>{{ 'wcag.declaration' | translate}}</h3>
 <ul>
     <li>
-        <button (click)="langPl = !langPl" class="btn">{{langPl ? 'Ukryj deklarację dostępności' : 'Pokaż deklarację dostępności'}}</button>
+        <button *ngIf="lang=='pl'" (click)="langPol()" class="btn">{{langPl ? 'Ukryj deklarację dostępności' : 'Pokaż deklarację dostępności'}}</button>
     </li>
 <li>
-    <button (click)="langEn = !langEn" class="btn">{{langEn ? 'Hide the declaration of availability' : 'Show declaration of availability'}}</button>
+    <button *ngIf="lang=='en'" (click)="langEng()" class="btn">{{langEn ? 'Hide the declaration of availability' : 'Show declaration of availability'}}</button>
 </li>
 <li>
-<button (click)="langEs = !langEs" class="btn">{{langEs ? 'Ocultar la declaración de disponibilidad' : 'Mostrar declaración de disponibilidad'}}</button>
+<button *ngIf="lang=='es'" (click)="langEsp()" class="btn">{{langEs ? 'Ocultar la declaración de disponibilidad' : 'Mostrar declaración de disponibilidad'}}</button>
 </li>
 
 </ul>

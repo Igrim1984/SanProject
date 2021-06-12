@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WcagService } from './../../services/wcag.service'
+import { LoginService } from 'src/app/services/login.service';
 
 
 
@@ -10,21 +11,24 @@ import { WcagService } from './../../services/wcag.service'
 })
 export class WcagComponent implements OnInit {
 
+
+  langPl = false;
+  langEn = false;
+  langEs = false;
   darkModeTemp = false;
   bigFontTemp = false;
   letterSpacingTemp = false;
   lineSpacingTemp = false;
   constructor(
     private wcag:WcagService,
+    private fromLogin: LoginService
 
   ) { }
 
   ngOnInit(): void {
   }
 
-  langPl = false;
-  langEn = false;
-  langEs = false;
+  lang: any
   
   darkMode(){
     this.darkModeTemp = !this.darkModeTemp;
@@ -49,6 +53,22 @@ export class WcagComponent implements OnInit {
     this.bigFontTemp = this.wcag.bigFont
     this.letterSpacingTemp = this.wcag.letterSpacing
     this.lineSpacingTemp = this.wcag.lineSpacing
+    this.lang = this.fromLogin.lang
 
+  }
+  langPol(){
+    this.langPl = !this.langPl;
+    this.langEn = false
+    this.langEs = false
+  }
+  langEng(){
+    this.langEn = !this.langEn;
+    this.langPl = false
+    this.langEs = false
+  }
+  langEsp(){
+    this.langEs = !this.langEs;
+    this.langEn = false
+    this.langPl = false
   }
 }

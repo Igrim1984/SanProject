@@ -8,6 +8,7 @@ export class LoginService {
 
   login: boolean = false;
   email: string;
+  lang = 'pl';
   users: any = usersExports;
 
 

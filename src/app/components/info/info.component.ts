@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WcagService } from './../../services/wcag.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-info',
@@ -13,8 +14,10 @@ export class InfoComponent implements OnInit {
   bigFont = false;
   letterSpacing = false;
   lineSpacing = false;
+  lang = 'pl'
   constructor(
-    private wcag: WcagService
+    private wcag: WcagService,
+    private fromLogin: LoginService
   ) {
     }
      ngOnInit(): void {
@@ -24,5 +27,6 @@ export class InfoComponent implements OnInit {
     this.bigFont = this.wcag.bigFont
     this.letterSpacing = this.wcag.letterSpacing
     this.lineSpacing = this.wcag.lineSpacing
+    this.lang = this.fromLogin.lang
 }
 }

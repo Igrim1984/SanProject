@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LoginService } from 'src/app/services/login.service';
 import { WcagService } from './../../services/wcag.service'
@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit {
   public ampm: string;
   public day: string;
 
+  @ViewChild("langselect") lang:any
+  
   login = false;
   darkMode = false;
   bigFont = false;
@@ -69,6 +71,9 @@ export class HeaderComponent implements OnInit {
   logOut() {
     this.login = false;
     this.fromLogin.login = this.login
+  }
+  setLang(){
+    this.fromLogin.lang = this.lang.nativeElement.value
   }
 }
 

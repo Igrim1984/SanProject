@@ -17,8 +17,7 @@
         <li>
           <a routerLink="contact">{{ 'nav.contact' | translate }}</a>
         </li>
-        <li>{{ 'nav.language' | translate }} <select #langselect (change)="translate.use(langselect.value) " name=""
-            id="">
+        <li>{{ 'nav.language' | translate }} <select #langselect (change)="translate.use(langselect.value)" (change)="setLang()">
             <option *ngFor="let lang of translate.getLangs()" [value]="lang">
               {{ lang }}
             </option>
