@@ -8,7 +8,9 @@
     "information": "Information",
     "log": "Login",
     "language": "Language",
-    "wcag": "Facilitate access"
+    "wcag": "Facilitate access",
+    "login": "logged in",
+    "logout": "log out"
   },
   "home": {
     "departure": "Departure city",
@@ -49,8 +51,8 @@
     "idPass": "Passport",
     "idCard": "ID card",
     "goTo": "Go to seat selection",
-    "currency": "Current USD exchange rate",
-    "getCurrency": "Get the current USD exchange rate"
+    "currency": "The cost of your ticket is",
+    "getCurrency": "Please select a currency"
   },
   "weather":{
       "weather": "Show weather",
@@ -59,6 +61,17 @@
       "temp": "Temperature",
       "humidity": "Air humidity",
       "pressure": "Pressure"
+    },
+    "footer": {
+    "ourFlights": "Our flights",
+    "flights": "Flights",
+    "reservation": "Reservations",
+    "aboutUs": "About us",
+    "news": "News",
+    "contact": "Contact",
+    "access": "Availability",
+    "wcag": "Accessibility",
+    "login": "Login"
     }
   }
 

@@ -4,27 +4,21 @@
   <div class="wrapper">
 
     <ul>
-      <b>Mapa serwisu</b>
-      <li routerLink="flight">Loty</li>
-      <li routerLink="login">Logowanie</li>
+      <b>{{ 'footer.ourFlights' | translate}}</b>
+      <li routerLink="flight">{{ 'footer.flights' | translate}}</li>
+      <li routerLink="seat">{{ 'footer.reservation' | translate}}</li>
     </ul>
 
     <ul>
-      <b>Dla klientów</b>
-      <li>Opłaty</li>
-      <li>Pomoc</li>
+      <b>{{ 'footer.aboutUs' | translate}}</b>
+      <li routerLink="info">{{ 'footer.news' | translate}}</li>
+      <li routerLink="contact">{{ 'footer.contact' | translate}}</li>
     </ul>
 
     <ul>
-      <b>Nasze loty</b>
-      <li>Rozkład lotów</li>
-      <li>Mapa</li>
-    </ul>
-
-    <ul>
-      <b >O nas</b>
-      <li routerLink="contact">Kontakt</li>
-      <li routerLink="info">O firmie</li>
+      <b>{{ 'footer.access' | translate}}</b>
+      <li routerLink="wcag">{{ 'footer.wcag' | translate}}</li>
+      <li routerLink="login">{{ 'footer.login' | translate}}</li>
     </ul>
   </div>
 

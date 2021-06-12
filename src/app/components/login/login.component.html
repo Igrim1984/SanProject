@@ -1,4 +1,5 @@
 <div class="container">
+    <ng-container *ngIf="!login">
     <div>Aktualnie mamy jednego użytwonika: "jan.kowalski@gmail.com" i hasło: "qwerty"</div>
 <ul class="login">
     <li>
@@ -9,6 +10,11 @@
     <label fro="password">Podaj swoje hasło: </label>
     <input type="password" id="password" [(ngModel)] ="userPassword">
 </li>
-    <button class="btn" (click)="logIn()">Zaloguj</button>
+    <button class="btn" (click)="logIn()">{{ 'nav.login' | translate}}</button>
 </ul>
+</ng-container>
+<ng-container *ngIf="login">
+    <p>Jesteś zalogowany jako {{this.userEmail}}</p>
+    <button (click)="logOut()"class="btn"> {{ 'nav.logout' | translate}} </button>
+</ng-container>
 </div>

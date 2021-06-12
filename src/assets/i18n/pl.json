@@ -8,7 +8,9 @@
     "information": "Informacje",
     "log": "Logowanie",
     "language": "Język",
-    "wcag": "Ułatwienia dostępu"
+    "wcag": "Ułatwienia dostępu",
+    "login": "zalogowano",
+    "logout": "wyloguj"
   },
   "home": {
     "departure": "Miasto wylotu",
@@ -49,8 +51,8 @@
     "idPass": "Paszport",
     "idCard": "Dowód osobisty",
     "goTo": "Przejdź do wyboru miejsc",
-    "currency": "Aktualny kurs USD",
-    "getCurrency": "Pobierz aktualny kurs USD"
+    "currency": "Koszt Twojego biletu to",
+    "getCurrency": "Wybierz walutę"
   },
   "weather":{
     "weather": "Pokaż pogodę",
@@ -59,5 +61,18 @@
     "temp": "Temperatura",
     "humidity":"Wilgotność powietrza",
     "pressure": "Ciśnienie"
-  }
+  },
+  "footer": {
+    "ourFlights": "Nasze loty",
+    "flights": "Loty",
+    "reservation": "Rezerwacje",
+    "aboutUs" : "O nas",
+    "news": "Aktualności",
+    "contact": "Kontakt",
+    "access": "Dostępność",
+    "wcag": "Ułatwienia dostępu",
+    "login": "Logowanie"
+
+
+  } 
 }

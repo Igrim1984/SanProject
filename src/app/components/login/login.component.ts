@@ -10,7 +10,7 @@ import { usersExports} from './users'
 })
 export class LoginComponent implements OnInit {
 
-  users = usersExports;
+
   userEmail: string; 
   userPassword: any;
   login = false;
@@ -18,20 +18,25 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService 
   ) { 
   }
+  users: any[] = usersExports
 
   ngOnInit(): void {
   }
 
     logIn() {
       if (this.userEmail == "jan.kowalski@gmail.com" && this.userPassword == "qwerty") {
-        this.userEmail = this.loginService.email
+        document.querySelector('#email').nodeValue = this.userEmail;
+        this.loginService.email = this.userEmail
         alert('Zalogowano poprawnie')
         this.loginService.login = true;
         this.login = this.loginService.login
      
-        console.log(this.userEmail)
-
       } else {
       alert('Podano niepoprawny adres email lub hasło')
     }}
+
+    logOut() {
+      this.login = false;
+      this.loginService.login = this.login
+    }
 }

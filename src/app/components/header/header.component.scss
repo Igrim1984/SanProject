@@ -1,5 +1,5 @@
 .container{
-    height: 30vh;
+    height: 25vh;
 
 }
 
@@ -7,9 +7,9 @@ h1{
     text-align: center;
 }
 img{
-    height: 120px;
-    width: 120px;
-    transform: translateY(-50%);
+    height: 180px;
+    width: 180px;
+    transform: translateY(-60%);
 }
 .clock{
 
@@ -43,11 +43,12 @@ img{
 ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
     flex-wrap: wrap;
     gap: 15px;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 a {
@@ -59,13 +60,13 @@ a:hover{
     color: yellow
 }
 
-@media (max-width: 790px) { 
+@media (max-width: 900px) { 
     .container {
-        height: 55vh;
+        height: 45vh;
     }
     .menu{
         flex-direction: column;
-        justify-content: space-around;
+
     }
     .logo{
         display: none;

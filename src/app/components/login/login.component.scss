@@ -1,12 +1,14 @@
 .container{
     text-align: center;
+    background-image: url(./../../../assets/Img/transport-5207942_1920.jpg);
+    background-size: cover;
+    min-height: 70vh;
 
 }
-.login {
-    border: 2px solid rgb(0, 55, 251);
-}
+
 
 ul{
+    margin-top: 10vh;
     list-style: none;
     li{
         padding: 10px;

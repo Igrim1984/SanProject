@@ -65,7 +65,6 @@ export class HeaderComponent implements OnInit {
     this.lineSpacing = this.wcag.lineSpacing
     this.login = this.fromLogin.login
     this.email = this.fromLogin.email
-    console.log(this.login, this.email)
   }
   logOut() {
     this.login = false;

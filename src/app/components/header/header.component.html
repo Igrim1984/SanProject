@@ -40,8 +40,9 @@
       
       <div class="login">
 
-    <p>ZALOGOWANO</p>  
-    <button class="logout" (click)=logOut()>Wyloguj</button> 
+    <p>{{'nav.login' | translate | uppercase}}</p>  
+    <p>{{email}}</p>
+    <button class="logout" (click)=logOut()>{{ 'nav.logout' | translate | uppercase}}</button> 
       </div>
     </ng-container>
   </div>

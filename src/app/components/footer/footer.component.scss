@@ -6,16 +6,23 @@
   
   ul{
     width:20%;
+    text-align: center;
   }
   b{
     text-transform: uppercase
   }
   li{
     list-style-type: none;
+    padding: 10px;
+    cursor: pointer;
   }
   
   li:first-of-type{
     margin-top: 10px;
+  }
+  li:hover{
+    color: yellow;
+    
   }
   
   .copyright{

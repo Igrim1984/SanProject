@@ -8,7 +8,9 @@
     "information": "Información",
     "log": "Acceso",
     "language": "Idioma",
-    "wcag": "Facilitar el acceso"
+    "wcag": "Facilitar el acceso",
+    "login":"conectado",
+    "logout": "cerrar sesión"
   },
   "home": {
     "departure": "Ciudad de salida",
@@ -49,8 +51,8 @@
     "idPass": "Pasaporte",
     "idCard": "Tarjeta de identificación",
     "goTo": "Ir a la selección de asientos",
-    "currency": "Tipo de cambio actual del USD",
-    "getCurrency": "Obtenga el tipo de cambio actual del USD"
+    "currency": "El costo de su boleto es",
+    "getCurrency": "Seleccione una moneda"
   },
   "weather":{
     "weather": "Mostrar el tiempo",
@@ -59,5 +61,16 @@
     "temp": "Temperatura",
     "humidity": "Humedad del aire",
     "pressure": "Presión"
+  },
+  "footer":{
+    "ourFlights": "Nuestros vuelos",
+    "flights": "Vuelos",
+    "reservation": "Reservas",
+    "aboutUs": "Quiénes somos",
+    "news": "Noticias",
+    "contact": "Contacto",
+    "access": "Disponibilidad",
+    "wcag": "Accesibilidad",
+    "login": "Iniciar sesión"
   }
 }

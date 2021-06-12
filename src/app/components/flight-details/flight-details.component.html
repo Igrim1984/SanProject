@@ -8,8 +8,16 @@
        <li>{{'flight.flightDate' | translate}}:  {{ formData.whenFrom }}</li>
        <li>{{'flight.returnDate' | translate}}:  {{ formData.whenReturn }}</li>
        <li>{{'flight.passangers' | translate}}:  {{ formData.passengers }}</li>
-       <div>{{'flight.currency' | translate}} to: {{this.result2}} PLN</div>
-       <button class="btn" (click)="getCurrency()">{{'flight.getCurrency' | translate}}</button>
+       <div> Koszt Twojego blietu to: {{price}} {{currencyType | uppercase}}</div>
+       <label for="currency">Wybierz walutę: </label>
+       <select name="" id="currency" [(ngModel)]="currencyType" (change)="getCurrency()">
+         <option value="usd">USD</option>
+         <option value="eur">EUR</option>
+         <option value="gbp">GBP</option>
+         <option value="pln">PLN</option>
+
+       </select>
+  
 
      </ul>
 
@@ -17,20 +25,20 @@
      <h2> {{'flight.data' | translate}} :</h2>
 
      <ul>
-       <li>{{ 'flight.name' | translate}}: <input type="text" name="" id=""></li>
-       <li>{{ 'flight.surname' | translate}}: <input type="text" name="" id=""></li>
-       <li>{{ 'flight.email' | translate}}: <input type="email" name="" id=""></li>
-       <li>{{ 'flight.city' | translate}}: <input type="text" name="" id=""></li>
-       <li>{{ 'flight.zipCode' | translate}}: <input type="text" name="" id=""></li>
-       <li>{{ 'flight.street' | translate}}: <input type="text" name="" id=""></li>
-       <li>{{ 'flight.houseNb' | translate}}: <input type="text" name="" id=""></li>
-       <li>{{ 'flight.apartNb' | translate}}: <input type="text" name="" id=""></li>
-       <li>{{ 'flight.id' | translate}}: <select name="" id="">
+       <li>{{ 'flight.name' | translate}}: <input type="text" name="" id="" [value]="data.name"></li>
+       <li>{{ 'flight.surname' | translate}}: <input type="text" name="" id="" [value]="data.surname"></li>
+       <li>{{ 'flight.email' | translate}}: <input type="email" name="" id="" [value]="data.email"></li>
+       <li>{{ 'flight.city' | translate}}: <input type="text" name="" id="" [value]="data.city"></li>
+       <li>{{ 'flight.zipCode' | translate}}: <input type="text" name="" id="" [value]="data.zipCode"></li>
+       <li>{{ 'flight.street' | translate}}: <input type="text" name="" id="" [value]="data.street"></li>
+       <li>{{ 'flight.houseNb' | translate}}: <input type="text" name="" id="" [value]="data.houseNbr"></li>
+       <li>{{ 'flight.apartNb' | translate}}: <input type="text" name="" id="" [value]="data.aprtNbr"></li>
+       <li>{{ 'flight.id' | translate}}: <select name="" id="" [value]="data.id">
          <option value="pass">{{ 'flight.idPass' | translate}}</option>
          <option value="card">{{ 'flight.idCard' | translate}}</option>
        </select></li>
-       <li>{{ 'flight.idNb' | translate}}: <input type="text" name="" id=""></li>
-       <li>{{ 'flight.phone' | translate}}: <input type="text" name="" id=""></li>
+       <li>{{ 'flight.idNb' | translate}}: <input type="text" name="" id="" [value]="data.idNbr"></li>
+       <li>{{ 'flight.phone' | translate}}: <input type="text" name="" id="" [value]="data.phone"></li>
      </ul>
      <button type="button" routerLink="/home" class="btn">{{'main.return' | translate}}</button>
      <button type="button" (click)="goToSeat()" class="btn">{{'flight.goTo' | translate}}</button>

@@ -1,13 +1,23 @@
-.container{
-    background-color: antiquewhite;
+.main{
+
     text-align: justify;
-    color: black;
     padding: 30px;
     div{
         margin-bottom: 20px;
     }
     iframe{
         margin: 0 auto;
+
     }
     
+}
+@media (min-width: 1000px) {
+    iframe {
+        transform: translateX(10%)
+    }
+}
+@media (min-width: 1400px) {
+    iframe {
+        transform: translateX(25%)
+    }
 }
