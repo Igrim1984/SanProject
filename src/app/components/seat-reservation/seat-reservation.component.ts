@@ -14,7 +14,7 @@ export class SeatReservationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  return(){
+  goBack(){
     this.route.navigate(["flight"])
   }
 }

@@ -56,6 +56,7 @@ export class HomeComponent implements OnInit {
   }
   changeWhereFrom() {
       this.formData.whereFrom = this.whereFrom;
+      
 
   }
   changeWhereTo() {
@@ -64,7 +65,7 @@ export class HomeComponent implements OnInit {
 }
 
 flightSearch(){
-  fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/PL/PLN/en-US/SFO-sky/jfk/2021-06-06?inboundpartialdate=2021-06-08", {
+  fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/PL/PLN/en-US/SFO-sky/jfk/2021-06-13?inboundpartialdate=2021-06-17", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "3b8e40e930mshf5781c1d8947291p1bbca2jsn80dc425cb20a",

@@ -43,10 +43,10 @@ export class WeatherComponent implements OnInit {
       return response.json();
     })
     .then((data) => { console.log(data); 
-      this.temp = Math.floor(data.main.temp-273.15)
+      this.temp = Math.floor((data.main.temp-273.15)*10)/10
       document.querySelector('#temp').innerHTML = this.temp + '&deg C';
-      document.querySelector('#humidity').innerHTML = data.main.humidity;
-      document.querySelector('#pressure').innerHTML = data.main.pressure})
+      document.querySelector('#humidity').innerHTML = data.main.humidity + ' %';
+      document.querySelector('#pressure').innerHTML = data.main.pressure + " hPa"})
     .catch(err => {
       console.error(err);
     }); 
@@ -68,10 +68,10 @@ export class WeatherComponent implements OnInit {
       return response.json();
     })
     .then((data) => { console.log(data); 
-      this.temp2 = Math.floor(data.main.temp-273.15)
+      this.temp2 = Math.floor((data.main.temp-273.15)*10)/10
       document.querySelector('#temp2').innerHTML = this.temp2 + '&deg C';
-      document.querySelector('#humidity2').innerHTML = data.main.humidity;
-      document.querySelector('#pressure2').innerHTML = data.main.pressure})
+      document.querySelector('#humidity2').innerHTML = data.main.humidity + ' %';
+      document.querySelector('#pressure2').innerHTML = data.main.pressure + ' hPa'})
     .catch(err => {
       console.error(err);
     }); 
