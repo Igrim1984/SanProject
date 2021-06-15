@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { homeCitiesExport } from './homeCities-export'
 import { WcagService} from './../../services/wcag.service'
 import { FlightDetailsService } from './../../services/flight-details.service'
@@ -17,7 +17,9 @@ export class HomeComponent implements OnInit {
   whereTo:any;
   whenFrom:any;
   whenReturn:any;
-  passengers: any;
+  passengers: number;
+
+
 
   darkMode = false;
   bigFont = false;
@@ -52,11 +54,22 @@ export class HomeComponent implements OnInit {
     this.formData.whenReturn = this.whenReturn;
     this.formData.passengers = this.passengers;
 
+    if(this.passengers < 1 || this.passengers == undefined) {
+      alert('Nie można wybrać mniej niż jednego pasażera!');
+      return false;
+    }
+    
+    if (this.whereFrom == this.whereTo)
+     {
+      alert('Miasto startowe i docelowe musi się różnić');
+      return false;
+     }
+
     this.route.navigate(["flight"])
   }
   changeWhereFrom() {
       this.formData.whereFrom = this.whereFrom;
-      
+
 
   }
   changeWhereTo() {

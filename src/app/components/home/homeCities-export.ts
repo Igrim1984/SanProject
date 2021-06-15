@@ -5,8 +5,8 @@ let homeCitiesExport: any[] = [
     { id: 'lod', name: "Łódź"},
     { id: 'par', name: "Paris"},
     { id: 'jfk', name: "New York"},
-    { id: 'mx', name: "Mexico City"},
-    { id: "to", name: "Tokyo"}
+    { id: 'mex', name: "Mexico City"},
+    { id: "tyo", name: "Tokyo"}
   ];
   
   export { homeCitiesExport }

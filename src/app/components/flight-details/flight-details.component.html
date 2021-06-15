@@ -7,7 +7,7 @@
        <li>{{'flight.flightTo' | translate}}:  {{ formData.whereTo }}</li>
        <li>{{'flight.flightDate' | translate}}:  {{ formData.whenFrom }}</li>
        <li>{{'flight.returnDate' | translate}}:  {{ formData.whenReturn }}</li>
-       <li>{{'flight.passangers' | translate}}:  {{ formData.passengers }}</li>
+       <li>{{'flight.passangers' | translate}}:  {{ passengers }}</li>
        <div> Koszt Twojego blietu to: {{price}} {{currencyType | uppercase}}</div>
        <label for="currency">Wybierz walutę: </label>
        <select name="" id="currency" [(ngModel)]="currencyType" (change)="getCurrency()">

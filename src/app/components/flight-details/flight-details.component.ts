@@ -25,6 +25,7 @@ export class FlightDetailsComponent implements OnInit {
   data = emptyUsersExports;
   currencyType: any;
   price: number;
+  passengers = 1 ;
 
   constructor(
     public formData: FlightDetailsService,
@@ -38,6 +39,7 @@ export class FlightDetailsComponent implements OnInit {
 
   }
   ngDoCheck(){
+    this.passengers = this.formData.passengers
     this.darkMode = this.wcag.darkMode
     this.bigFont = this.wcag.bigFont
     this.letterSpacing = this.wcag.letterSpacing
@@ -54,12 +56,12 @@ export class FlightDetailsComponent implements OnInit {
     if (this.currencyType != "pln") {
     this.currency.currency = this.currencyType
     this.result = this.currency.getCurrency().subscribe(result => {
-      this.result2 = Object(result).rates[0].mid});
-      console.log(this.price, this.result2);
-      this.price = Math.round(520/(this.result2)*100)/100;
+      this.result2 = Object(result).rates[0].mid})
+     
+      this.price = Math.round((520*this.passengers)/(this.result2)*100)/100;
     }
     else {
-      this.price = 520.00
+      this.price = 520.00*this.passengers
     }
   }
 }

@@ -11,7 +11,7 @@
 
       <ul>
         <li>
-          <select style="width: 100%" (change)="changeWhereFrom()" [(ngModel)]="whereFrom">
+          <select style="width: 100%" (change)="changeWhereFrom()"  [(ngModel)]="whereFrom">
             <option [value]="homeCity.name" *ngFor="let homeCity of homeCities" >
               {{homeCity.name}}
             </option>
@@ -19,13 +19,13 @@
         </li>
         <li>
           <select style="width: 100%" [(ngModel)]="whereTo" (change)="changeWhereTo()">
-            <option [value]="homeCity.name" *ngFor="let homeCity of homeCities">
+            <option [value]="homeCity.name" *ngFor="let homeCity of homeCities" >
               {{homeCity.name}}
             </option>
           </select>
         </li>
-        <li><input type="date" [(ngModel)]="whenFrom"/></li>
-        <li><input type="date" [(ngModel)]="whenReturn"/></li>
+        <li><input type="date" [(ngModel)]="whenFrom" min="2021-06-15"/></li>
+        <li><input type="date" [(ngModel)]="whenReturn" min="2021-06-15"/></li>
         <li><input style="width: 100%" type="number" min="1" max="9" [(ngModel)]="passengers"/></li>
       </ul>
     </div>
