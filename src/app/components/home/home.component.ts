@@ -3,6 +3,7 @@ import { homeCitiesExport } from './homeCities-export'
 import { WcagService} from './../../services/wcag.service'
 import { FlightDetailsService } from './../../services/flight-details.service'
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
   whenFrom:any;
   whenReturn:any;
   passengers: number;
+  day: any
 
 
 
@@ -28,7 +30,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private wcag:WcagService,
     public formData:FlightDetailsService,
-    private route:Router
+    private route:Router,
+    private fromLogin: LoginService
   ){
 
   }
@@ -46,6 +49,7 @@ export class HomeComponent implements OnInit {
     this.bigFont = this.wcag.bigFont
     this.letterSpacing = this.wcag.letterSpacing
     this.lineSpacing = this.wcag.lineSpacing
+    this.day = this.fromLogin.day
   }
   getDataFrom(){
     this.formData.whereFrom = this.whereFrom;
@@ -53,28 +57,36 @@ export class HomeComponent implements OnInit {
     this.formData.whenFrom = this.whenFrom;
     this.formData.whenReturn = this.whenReturn;
     this.formData.passengers = this.passengers;
+    let flag = false;
 
     if(this.passengers < 1 || this.passengers == undefined) {
       alert('Nie można wybrać mniej niż jednego pasażera!');
-      return false;
-    }
+    }else flag = true
     
     if (this.whereFrom == this.whereTo)
      {
       alert('Miasto startowe i docelowe musi się różnić');
-      return false;
-     }
+     }else flag = true
 
-    this.route.navigate(["flight"])
+     console.log(flag)
+    if (flag === false) { 
+     return false
+    }else this.route.navigate(["flight"])
   }
   changeWhereFrom() {
       this.formData.whereFrom = this.whereFrom;
-
 
   }
   changeWhereTo() {
     this.formData.whereTo = this.whereTo;
 
+}
+
+setWhenDate() {
+  document.getElementById('whenFrom').setAttribute("min",this.day);
+}
+setWhenReturnDate() {
+  document.getElementById('whenReturn').setAttribute("min",this.day);
 }
 
 flightSearch(){

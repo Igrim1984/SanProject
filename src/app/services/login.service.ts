@@ -10,6 +10,7 @@ export class LoginService {
   email: string;
   lang = 'pl';
   users: any = usersExports;
+  day: any
 
 
   constructor( ) { }

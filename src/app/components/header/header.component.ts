@@ -45,6 +45,7 @@ export class HeaderComponent implements OnInit {
       this.updateDate(date);
     },1000);
     this.day = this.daysArray[this.date.getDay()];
+    this.fromLogin.day = this.date.getFullYear() +"-" +(this.date.getMonth() < 10 ? '0' : "")+(this.date.getMonth()+1 )+"-"+ this.date.getDate(); 
   };
 
 
